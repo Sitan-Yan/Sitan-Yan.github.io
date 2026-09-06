@@ -269,4 +269,3 @@ If corrections were required, commit only the affected homepage files:
 git add index.html style.css script.js assets tests/validate_site.py
 git commit -m "fix: polish academic homepage presentation"
 ```
-
