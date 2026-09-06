@@ -1,462 +1,209 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sitan Yan| Personal Website</title>
-
-    <meta
-        name="description"
-        content="你的名字的个人主页、项目、经历和联系方式"
-    >
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                "PingFang SC",
-                "Microsoft YaHei",
-                sans-serif;
-
-            color: #222;
-            background: #f7f7f7;
-            line-height: 1.7;
-        }
-
-        /* 导航栏 */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid #eee;
-
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 16px 24px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            margin-left: 24px;
-        }
-
-        .nav-links a:hover {
-            color: #0969da;
-        }
-
-        /* 首页 */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-            padding: 100px 20px 60px;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-
-            border-radius: 50%;
-            object-fit: cover;
-
-            margin-bottom: 25px;
-
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 22px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .intro {
-            color: #555;
-            font-size: 17px;
-            margin-bottom: 30px;
-        }
-
-        .button {
-            display: inline-block;
-
-            padding: 11px 22px;
-
-            margin: 6px;
-
-            border-radius: 8px;
-
-            background: #111;
-            color: white;
-
-            text-decoration: none;
-
-            transition: 0.2s;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            opacity: 0.85;
-        }
-
-        .button.secondary {
-            background: white;
-            color: #222;
-            border: 1px solid #ddd;
-        }
-
-        /* 通用区域 */
-
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 90px 24px;
-        }
-
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        /* About */
-
-        .about {
-            font-size: 17px;
-            color: #555;
-        }
-
-        /* Projects */
-
-        .projects {
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(260px, 1fr));
-
-            gap: 22px;
-        }
-
-        .card {
-            background: white;
-
-            padding: 26px;
-
-            border-radius: 14px;
-
-            border: 1px solid #eee;
-
-            transition: 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 12px 35px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .card a {
-            color: #0969da;
-            text-decoration: none;
-        }
-
-        /* 联系方式 */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            color: #888;
-
-            padding: 40px 20px;
-
-            border-top: 1px solid #eee;
-        }
-
-        /* 手机 */
-
-        @media (max-width: 600px) {
-
-            h1 {
-                font-size: 36px;
-            }
-
-            .subtitle {
-                font-size: 19px;
-            }
-
-            .nav-links a {
-                margin-left: 12px;
-                font-size: 14px;
-            }
-
-            .avatar {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitan Yan — academic personal website and research portfolio." />
+  <title>Sitan Yan | Academic Homepage</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
-<nav>
-    <div class="nav-container">
-
-        <div class="logo">
-            YourName
-        </div>
-
-        <div class="nav-links">
-            <a href="#about">关于我</a>
-            <a href="#projects">项目</a>
-            <a href="#contact">联系</a>
-        </div>
-
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Sitan Yan</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a class="nav-cv" href="files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
     </div>
-</nav>
+  </header>
 
+  <main id="top">
+    <section class="hero container" id="about">
+      <div class="avatar" aria-label="Profile photo placeholder">
+        <span>SY</span>
+      </div>
 
-<!-- 首页 -->
+      <div class="hero-copy">
+        <p class="eyebrow">Mechanical Engineering · Academic Homepage</p>
+        <h1>Sitan Yan</h1>
 
-<div class="hero">
-
-    <div class="hero-content">
-
-        <img
-            class="avatar"
-            src="https://github.com/你的GitHub用户名.png"
-            alt="个人头像"
-        >
-
-        <h1>
-            你好，我是你的名字 👋
-        </h1>
-
-        <div class="subtitle">
-            Developer · Student · Creator
-        </div>
-
-        <p class="intro">
-            欢迎来到我的个人主页。
-            我喜欢编程、技术和创造有趣的东西。
-            这里记录我的项目、经历以及正在学习的内容。
+        <p class="lead">
+          M.Eng. student in Mechanical Engineering at
+          Huazhong University of Science and Technology (HUST).
+          My research interests include robotic perception and control,
+          automated optical metrology, motion planning and optimization,
+          and shape-from-focus (SFF) reconstruction.
         </p>
 
-        <a
-            class="button"
-            href="https://github.com/你的GitHub用户名"
-            target="_blank"
-        >
-            GitHub
-        </a>
-
-        <a
-            class="button secondary"
-            href="#projects"
-        >
-            查看项目
-        </a>
-
-    </div>
-
-</div>
-
-
-<!-- About -->
-
-<section id="about">
-
-    <h2>关于我</h2>
-
-    <div class="about">
-
-        <p>
-            我是 XXX，目前正在学习 / 从事 XXX。
+        <p class="bio">
+          I am interested in developing reliable perception, measurement,
+          and control methods for robotic and precision-engineering systems,
+          with a current focus on microscopic 3D reconstruction and
+          reflective micro-hole metrology.
         </p>
 
-        <br>
+        <div class="hero-links">
+          <a href="mailto:sitan@hust.edu.cn">Email</a>
+          <a href="files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener">CV</a>
 
-        <p>
-            我主要关注 Web 开发、人工智能、
-            数据分析等方向。
-        </p>
+          <!-- Replace # with your real profile URLs when ready. -->
+          <a href="#" aria-disabled="true" title="Replace with your Google Scholar URL">Google Scholar</a>
+          <a href="#" aria-disabled="true" title="Replace with your GitHub URL">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-        <br>
+    <section class="section container" id="research">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Research</p>
+        <h2>Research</h2>
+      </div>
 
-        <p>
-            技术栈：
-            HTML / CSS / JavaScript /
-            Python / Git / ...
-        </p>
+      <article class="research-card">
+        <div class="research-media">
+          <!--
+            Replace this placeholder with either:
+            <img src="assets/sff-teaser.jpg" alt="SFF micro-hole measurement system" />
 
+            OR a muted looping experiment video:
+            <video autoplay muted loop playsinline controls>
+              <source src="assets/sff-experiment.mp4" type="video/mp4" />
+            </video>
+          -->
+          <div class="media-placeholder">
+            <div class="focus-stack">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p>SFF Micro-hole Measurement</p>
+            <small>Replace with a teaser image or experiment video</small>
+          </div>
+        </div>
+
+        <div class="research-content">
+          <div class="status-row">
+            <span class="status">Major Revision · IEEE TIM</span>
+          </div>
+
+          <h3>Reliability-Aware Shape-from-Focus for Reflective 3D Micro-Hole Measurement</h3>
+
+          <p class="authors">
+            <strong>Sitan Yan</strong>, W. Xu, L. Zeng, and W. Li
+          </p>
+
+          <p>
+            This project develops a microscopic shape-from-focus metrology
+            system for reflective industrial micro-holes. The work combines
+            focus-stack acquisition, reflection-aware preprocessing,
+            reliability-aware reconstruction, and experimental validation
+            against a commercial reference instrument.
+          </p>
+
+          <ul class="compact-list">
+            <li>Integrated a microscopic SFF measurement setup with 10× optics, polarizers, and translation stages.</li>
+            <li>Developed reflection-aware preprocessing and reliability-aware 3D reconstruction.</li>
+            <li>Validated the reconstructed geometry against an Alicona IFM G5 reference instrument.</li>
+          </ul>
+
+          <!-- Add Video / Demo / Project links here later when the materials are ready. -->
+        </div>
+      </article>
+    </section>
+
+    <section class="section container" id="publications">
+      <div class="section-heading">
+        <p class="eyebrow">Research Outputs</p>
+        <h2>Publications & Manuscripts</h2>
+      </div>
+
+      <div class="publication-list">
+        <article class="publication-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Reliability-aware shape-from-focus for reflective 3-D micro-hole measurement</h3>
+            <p><strong>S. Yan</strong>, W. Xu, L. Zeng, and W. Li</p>
+            <p class="muted">Manuscript under major revision at IEEE Transactions on Instrumentation and Measurement.</p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <h3>Preliminary Design and Prototype Development of an Air-ground Carrier Platform</h3>
+            <p>T. Chen, J. Han, J. Wang, <strong>S. Yan</strong>, C. Wan, and F. Tian</p>
+            <p class="muted">2023 International Conference on Unmanned Aircraft Systems (ICUAS), Warsaw, Poland.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Background</p>
+        <h2>Education</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2024 — 2027</div>
+          <div>
+            <h3>Huazhong University of Science and Technology (HUST)</h3>
+            <p>M.Eng. in Mechanical Engineering · Expected Jun 2027</p>
+            <p class="muted">GPA: 3.95 / 4.00</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">2020 — 2024</div>
+          <div>
+            <h3>Huazhong University of Science and Technology (HUST)</h3>
+            <p>B.Eng. in Mechanical Design, Manufacturing and Automation</p>
+            <p class="muted">GPA: 3.96 / 4.00 · Distinguished Graduate of HUST (2024)</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="two-column">
+        <div>
+          <p class="eyebrow">Selected Honors</p>
+          <h2>Honors</h2>
+          <ul class="simple-list">
+            <li><span>2024</span> Distinguished Graduate of HUST</li>
+            <li><span>2022</span> First Prize, Chinese Mathematics Competitions (CMC)</li>
+            <li><span>2022</span> Third Prize, China Collegiate Intelligent Robotics Creative Competition</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">Technical Background</p>
+          <h2>Skills</h2>
+          <p><strong>Programming:</strong> C++, Python, MATLAB</p>
+          <p><strong>Tools:</strong> ROS / ROS 2, Gazebo, MoveIt, SolidWorks, Simulink</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container contact" id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Get in touch</h2>
+      <p>
+        For research discussions or PhD-related correspondence,
+        please feel free to contact me by email.
+      </p>
+      <a class="button" href="mailto:sitan@hust.edu.cn">sitan@hust.edu.cn</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Sitan Yan · Built with GitHub Pages</p>
     </div>
-
-</section>
-
-
-<!-- Projects -->
-
-<section id="projects">
-
-    <h2>我的项目</h2>
-
-    <div class="projects">
-
-        <div class="card">
-
-            <h3>Project One</h3>
-
-            <p>
-                在这里介绍你的第一个项目。
-                可以简单说明它解决了什么问题。
-            </p>
-
-            <a
-                href="https://github.com/你的GitHub用户名"
-                target="_blank"
-            >
-                查看项目 →
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Project Two</h3>
-
-            <p>
-                在这里介绍你的第二个项目，
-                比如网站、程序或者研究项目。
-            </p>
-
-            <a
-                href="https://github.com/你的GitHub用户名"
-                target="_blank"
-            >
-                查看项目 →
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Project Three</h3>
-
-            <p>
-                这里可以展示你的课程项目、
-                开源项目或者个人作品。
-            </p>
-
-            <a
-                href="https://github.com/你的GitHub用户名"
-                target="_blank"
-            >
-                查看项目 →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Contact -->
-
-<section
-    id="contact"
-    class="contact"
->
-
-    <h2>联系我</h2>
-
-    <p>
-        如果你对我的项目感兴趣，
-        欢迎通过 Email 或 GitHub 联系我。
-    </p>
-
-    <a
-        class="button"
-        href="mailto:your@email.com"
-    >
-        Email Me
-    </a>
-
-</section>
-
-
-<footer>
-
-    © 2026 Your Name.
-    Built with GitHub Pages.
-
-</footer>
-
-
+  </footer>
 </body>
 </html>
