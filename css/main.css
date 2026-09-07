@@ -1,0 +1,973 @@
+/* =========================================================
+   Base
+   ========================================================= */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+
+  --text: #1f2328;
+  --muted: #656d76;
+
+  --line: #d8dee4;
+
+  --link: #0969da;
+  --link-hover: #075bbd;
+
+  --max-width: 1080px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+
+body {
+  margin: 0;
+
+  color: var(--text);
+  background: var(--bg);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  /*
+    原来是 1.7。
+    这是造成“像 Word 大行距”的原因之一。
+  */
+  line-height: 1.48;
+
+  font-size: 16px;
+}
+
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+
+p {
+  /*
+    避免浏览器默认的巨大上下 margin
+  */
+  margin-top: 0;
+  margin-bottom: 0.72rem;
+}
+
+
+strong {
+  font-weight: 650;
+}
+
+
+.container {
+  width: min(
+    calc(100% - 40px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+
+  top: 0;
+  z-index: 20;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-bottom:
+    1px solid var(--line);
+
+  backdrop-filter: blur(10px);
+}
+
+
+.nav-wrap {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+.brand {
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.brand:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+.nav-links a {
+  color: #3d444d;
+
+  font-size: 0.91rem;
+  font-weight: 500;
+}
+
+
+.nav-links a:hover {
+  color: var(--link);
+
+  text-decoration: none;
+}
+
+
+.nav-cv {
+  padding: 5px 11px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 6px;
+}
+
+
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+
+  line-height: 1.28;
+}
+
+
+h1 {
+  margin: 0 0 3px;
+
+  font-size:
+    clamp(
+      2.35rem,
+      5vw,
+      3.35rem
+    );
+
+  font-weight: 720;
+
+  letter-spacing: -0.035em;
+}
+
+
+h2 {
+  margin: 0;
+
+  font-size: 1.62rem;
+
+  font-weight: 680;
+
+  letter-spacing: -0.018em;
+}
+
+
+h3 {
+  margin-top: 0;
+
+  margin-bottom: 6px;
+
+  font-size: 1.08rem;
+
+  font-weight: 650;
+}
+
+
+.eyebrow {
+  margin: 0 0 5px;
+
+  color: var(--muted);
+
+  font-size: 0.73rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.095em;
+
+  text-transform: uppercase;
+}
+
+
+.muted {
+  color: var(--muted);
+}
+
+
+.small {
+  font-size: 0.91rem;
+}
+
+
+
+/* =========================================================
+   Hero / About
+   ========================================================= */
+
+.hero {
+  display: grid;
+
+  grid-template-columns:
+    126px 1fr;
+
+  gap: 36px;
+
+  align-items: center;
+
+  /*
+    原版：
+      min-height: 500px;
+      padding: 76px 0;
+
+    这里去掉 min-height 并明显压缩。
+  */
+  padding-top: 48px;
+  padding-bottom: 44px;
+}
+
+
+.avatar {
+  width: 122px;
+  height: 122px;
+
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 50%;
+
+  background: var(--surface);
+}
+
+
+.avatar span {
+  color: #57606a;
+
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.position {
+  margin: 0 0 17px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  font-weight: 500;
+}
+
+
+.lead {
+  max-width: 850px;
+
+  margin-bottom: 10px;
+
+  font-size: 1.04rem;
+
+  line-height: 1.63;
+}
+
+
+.bio {
+  max-width: 850px;
+
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: 0.98rem;
+
+  line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   Hero links
+   ========================================================= */
+
+.hero-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+
+.social-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--link);
+
+  font-size: 1rem;
+
+  font-weight: 600;
+}
+
+
+.social-link i {
+  /*
+    图标尺寸
+  */
+  font-size: 1.25rem;
+
+  line-height: 1;
+}
+
+
+.social-link:hover {
+  text-decoration: none;
+}
+
+
+
+/* =========================================================
+   General Sections
+   ========================================================= */
+
+.section {
+  /*
+    原版是 72px 0。
+    这里改为 44px，大幅压缩页面长度。
+  */
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+
+.section-heading {
+  /*
+    原版 30px。
+  */
+  margin-bottom: 22px;
+}
+
+
+
+/* =========================================================
+   Research Interests
+   ========================================================= */
+
+.interest-list {
+  display: flex;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+
+.interest-list span {
+  display: inline-block;
+
+  padding: 5px 11px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 6px;
+
+  background: var(--surface);
+
+  color: #3d444d;
+
+  font-size: 0.91rem;
+}
+
+
+
+/* =========================================================
+   Education
+   ========================================================= */
+
+.timeline {
+  display: grid;
+
+  gap: 0;
+}
+
+
+.timeline-item {
+  display: grid;
+
+  grid-template-columns:
+    170px 1fr;
+
+  gap: 25px;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+
+.timeline-item:first-child {
+  border-top:
+    1px solid var(--line);
+}
+
+
+.timeline-date {
+  color: var(--muted);
+
+  font-size: 0.91rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.timeline-content h3 {
+  margin-bottom: 3px;
+}
+
+
+.timeline-content p {
+  margin-bottom: 2px;
+}
+
+
+.institution-short {
+  font-weight: 500;
+
+  color: var(--muted);
+}
+
+
+
+/* =========================================================
+   Research Projects
+   ========================================================= */
+
+.project-list {
+  border-top:
+    1px solid var(--line);
+}
+
+
+.project-item {
+  display: grid;
+
+  /*
+    Left: number/date
+    Center: project description
+    Right: preview image
+  */
+  grid-template-columns: 135px minmax(0, 1fr) 260px;
+
+  gap: 28px;
+
+  align-items: center;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Project Preview ---------- */
+
+.project-media {
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  /*
+    Keep all project preview images
+    visually consistent.
+  */
+  aspect-ratio: 16 / 10;
+}
+
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+    Recommended for scientific figures,
+    diagrams, pipelines, screenshots, etc.
+  */
+  object-fit: contain;
+}
+
+
+.project-side {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.project-number {
+  color: var(--text);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+
+.project-date {
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.45;
+}
+
+
+.project-title-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 7px;
+}
+
+
+.project-title-row h3 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-size: 1.15rem;
+}
+
+
+.status {
+  flex-shrink: 0;
+
+  display: inline-block;
+
+  padding: 3px 8px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 999px;
+
+  background: var(--surface);
+
+  color: #57606a;
+
+  font-size: 0.74rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.project-summary {
+  max-width: 830px;
+
+  margin: 0 0 8px;
+
+  color: #3d444d;
+
+  font-size: 0.96rem;
+}
+
+
+.compact-list {
+  margin:
+    7px 0 0;
+
+  padding-left: 19px;
+
+  color: var(--muted);
+
+  font-size: 0.93rem;
+
+  line-height: 1.52;
+}
+
+
+.compact-list li {
+  margin: 3px 0;
+}
+
+
+.project-link {
+  display: inline-block;
+
+  margin-top: 11px;
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+}
+
+
+
+/* =========================================================
+   Publications
+   ========================================================= */
+
+.publication-list {
+  border-top:
+    1px solid var(--line);
+}
+
+
+.publication-item {
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+
+.pub-year {
+  color: var(--muted);
+
+  font-size: 0.91rem;
+
+  font-weight: 600;
+}
+
+
+.publication-item h3 {
+  margin-bottom: 4px;
+
+  font-size: 1.03rem;
+}
+
+
+.authors {
+  margin-bottom: 2px;
+
+  color: #3d444d;
+
+  font-size: 0.94rem;
+}
+
+
+.pub-status {
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: 0.91rem;
+}
+
+
+
+/* =========================================================
+   Awards
+   ========================================================= */
+
+.award-list {
+  border-top:
+    1px solid var(--line);
+}
+
+
+.award-item {
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 20px;
+
+  padding: 10px 0;
+
+  border-bottom:
+    1px solid var(--line);
+
+  font-size: 0.94rem;
+}
+
+
+.award-year {
+  color: var(--muted);
+
+  font-weight: 600;
+}
+
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.footer {
+  border-top:
+    1px solid var(--line);
+
+  padding: 22px 0 28px;
+
+  color: var(--muted);
+
+  font-size: 0.86rem;
+}
+
+
+.footer-inner {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.footer p {
+  margin: 0;
+}
+
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  .nav-wrap {
+    min-height: auto;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+
+  .nav-links {
+    gap: 13px;
+  }
+
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+
+  .avatar {
+    width: 108px;
+    height: 108px;
+  }
+
+
+  .project-item {
+    grid-template-columns:
+      105px 1fr;
+
+    gap: 20px;
+  }
+
+
+  .project-title-row {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+
+  .status {
+    align-self: flex-start;
+  }
+
+}
+
+
+
+@media (max-width: 620px) {
+
+  .container {
+    width:
+      min(
+        calc(100% - 30px),
+        var(--max-width)
+      );
+  }
+
+
+  .site-header {
+    position: static;
+  }
+
+
+  .nav-links {
+    font-size: 0.9rem;
+  }
+
+
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 34px;
+  }
+
+
+  h1 {
+    font-size: 2.45rem;
+  }
+
+
+  .lead {
+    font-size: 1rem;
+  }
+
+
+  .section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+
+  .timeline-item,
+  .project-item,
+  .publication-item,
+  .award-item {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+
+  .project-side {
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 12px;
+  }
+
+
+  .project-title-row {
+    margin-top: 5px;
+  }
+
+
+  .hero-links {
+    gap: 19px;
+  }
+
+
+  .footer-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+  }
+
+}

@@ -1,209 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitan Yan — academic personal website and research portfolio." />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Sitan Yan — academic personal website and research portfolio."
+  />
+
   <title>Sitan Yan | Academic Homepage</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link
+    rel="stylesheet"
+    href="css/main.css"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
 </head>
 
+
 <body>
+
+  <!-- ==================== Navigation ==================== -->
+
   <header class="site-header">
+
     <div class="container nav-wrap">
-      <a class="brand" href="#top">Sitan Yan</a>
-      <nav class="nav-links" aria-label="Main navigation">
+
+      <a
+        class="brand"
+        href="#top"
+      >
+        Sitan Yan
+      </a>
+
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
         <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#education">Education</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a class="nav-cv" href="files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="#awards">Awards</a>
+
+        <a
+          class="nav-cv"
+          href="files/Sitan_Yan_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV
+        </a>
       </nav>
+
     </div>
+
   </header>
 
+
+  <!-- ==================== Main ==================== -->
+
   <main id="top">
-    <section class="hero container" id="about">
-      <div class="avatar" aria-label="Profile photo placeholder">
+
+
+    <!-- ==================== About ==================== -->
+
+    <section
+      class="hero container"
+      id="about"
+    >
+
+      <!--
+        Replace this placeholder with your profile photo later:
+
+        <div class="avatar">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Portrait of Sitan Yan"
+          />
+        </div>
+      -->
+
+      <div
+        class="avatar"
+        aria-label="Profile photo placeholder"
+      >
         <span>SY</span>
       </div>
 
+
       <div class="hero-copy">
-        <p class="eyebrow">Mechanical Engineering · Academic Homepage</p>
+
         <h1>Sitan Yan</h1>
 
-        <p class="lead">
-          M.Eng. student in Mechanical Engineering at
-          Huazhong University of Science and Technology (HUST).
-          My research interests include robotic perception and control,
-          automated optical metrology, motion planning and optimization,
-          and shape-from-focus (SFF) reconstruction.
+        <p class="position">
+          Robotics · Precision Engineering · 3D Vision
         </p>
+
+
+        <p class="lead">
+
+          I am a Master's student in Mechanical Engineering at
+          <strong>Huazhong University of Science and Technology (HUST)</strong>,
+          advised by
+          <a
+            href="https://mse.hust.edu.cn/info/1142/1340.htm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Prof. Wenlong Li
+          </a>
+          at the 
+          <strong>
+            State Key Laboratory of Digital Manufacturing Equipment
+            and Technology
+          </strong>.
+          
+
+        </p>
+
 
         <p class="bio">
-          I am interested in developing reliable perception, measurement,
-          and control methods for robotic and precision-engineering systems,
-          with a current focus on microscopic 3D reconstruction and
-          reflective micro-hole metrology.
+
+          My research focuses on reliable perception, measurement,
+          planning, and control methods for robotic and
+          precision-engineering systems, with current work spanning
+          microscopic 3D reconstruction, robotic visual control,
+          and motion planning under uncertainty.
+
         </p>
 
+
+        <!-- Social / Contact Links -->
+
         <div class="hero-links">
-          <a href="mailto:sitan@hust.edu.cn">Email</a>
-          <a href="files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener">CV</a>
 
-          <!-- Replace # with your real profile URLs when ready. -->
-          <a href="#" aria-disabled="true" title="Replace with your Google Scholar URL">Google Scholar</a>
-          <a href="#" aria-disabled="true" title="Replace with your GitHub URL">GitHub</a>
+          <a
+            class="social-link"
+            href="mailto:sitan@hust.edu.cn"
+          >
+            <i
+              class="bi bi-envelope-fill"
+              aria-hidden="true"
+            ></i>
+
+            <span>Email</span>
+          </a>
+
+
+          <a
+            class="social-link"
+            href="https://github.com/Sitan-Yan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="bi bi-github"
+              aria-hidden="true"
+            ></i>
+
+            <span>GitHub</span>
+          </a>
+
+
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/sitan-yan-ab3509434/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="bi bi-linkedin"
+              aria-hidden="true"
+            ></i>
+
+            <span>LinkedIn</span>
+          </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section container" id="research">
+
+
+    <!-- ==================== Research Interests ==================== -->
+
+    <section
+      class="section container"
+      id="interests"
+    >
+
       <div class="section-heading">
-        <p class="eyebrow">Selected Research</p>
-        <h2>Research</h2>
+
+        <p class="eyebrow">
+          Research Directions
+        </p>
+
+        <h2>
+          Research Interests
+        </h2>
+
       </div>
 
-      <article class="research-card">
-        <div class="research-media">
-          <!--
-            Replace this placeholder with either:
-            <img src="assets/sff-teaser.jpg" alt="SFF micro-hole measurement system" />
 
-            OR a muted looping experiment video:
-            <video autoplay muted loop playsinline controls>
-              <source src="assets/sff-experiment.mp4" type="video/mp4" />
-            </video>
-          -->
-          <div class="media-placeholder">
-            <div class="focus-stack">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <p>SFF Micro-hole Measurement</p>
-            <small>Replace with a teaser image or experiment video</small>
-          </div>
-        </div>
+      <div class="interest-list">
 
-        <div class="research-content">
-          <div class="status-row">
-            <span class="status">Major Revision · IEEE TIM</span>
-          </div>
+        <span>
+          Robotic Perception and Control
+        </span>
 
-          <h3>Reliability-Aware Shape-from-Focus for Reflective 3D Micro-Hole Measurement</h3>
+        <span>
+          Automated Optical Metrology
+        </span>
 
-          <p class="authors">
-            <strong>Sitan Yan</strong>, W. Xu, L. Zeng, and W. Li
-          </p>
+        <span>
+          Motion Planning and Optimization
+        </span>
 
-          <p>
-            This project develops a microscopic shape-from-focus metrology
-            system for reflective industrial micro-holes. The work combines
-            focus-stack acquisition, reflection-aware preprocessing,
-            reliability-aware reconstruction, and experimental validation
-            against a commercial reference instrument.
-          </p>
+        <span>
+          Shape-from-Focus Reconstruction
+        </span>
 
-          <ul class="compact-list">
-            <li>Integrated a microscopic SFF measurement setup with 10× optics, polarizers, and translation stages.</li>
-            <li>Developed reflection-aware preprocessing and reliability-aware 3D reconstruction.</li>
-            <li>Validated the reconstructed geometry against an Alicona IFM G5 reference instrument.</li>
-          </ul>
+      </div>
 
-          <!-- Add Video / Demo / Project links here later when the materials are ready. -->
-        </div>
-      </article>
     </section>
 
-    <section class="section container" id="publications">
+
+
+    <!-- ==================== Education ==================== -->
+
+    <section
+      class="section container"
+      id="education"
+    >
+
       <div class="section-heading">
-        <p class="eyebrow">Research Outputs</p>
-        <h2>Publications & Manuscripts</h2>
+
+        <p class="eyebrow">
+          Academic Background
+        </p>
+
+        <h2>
+          Education
+        </h2>
+
       </div>
 
-      <div class="publication-list">
-        <article class="publication-item">
-          <div class="pub-year">2026</div>
-          <div>
-            <h3>Reliability-aware shape-from-focus for reflective 3-D micro-hole measurement</h3>
-            <p><strong>S. Yan</strong>, W. Xu, L. Zeng, and W. Li</p>
-            <p class="muted">Manuscript under major revision at IEEE Transactions on Instrumentation and Measurement.</p>
-          </div>
-        </article>
-
-        <article class="publication-item">
-          <div class="pub-year">2023</div>
-          <div>
-            <h3>Preliminary Design and Prototype Development of an Air-ground Carrier Platform</h3>
-            <p>T. Chen, J. Han, J. Wang, <strong>S. Yan</strong>, C. Wan, and F. Tian</p>
-            <p class="muted">2023 International Conference on Unmanned Aircraft Systems (ICUAS), Warsaw, Poland.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="education">
-      <div class="section-heading">
-        <p class="eyebrow">Background</p>
-        <h2>Education</h2>
-      </div>
 
       <div class="timeline">
-        <article class="timeline-item">
-          <div class="timeline-date">2024 — 2027</div>
-          <div>
-            <h3>Huazhong University of Science and Technology (HUST)</h3>
-            <p>M.Eng. in Mechanical Engineering · Expected Jun 2027</p>
-            <p class="muted">GPA: 3.95 / 4.00</p>
-          </div>
-        </article>
 
         <article class="timeline-item">
-          <div class="timeline-date">2020 — 2024</div>
-          <div>
-            <h3>Huazhong University of Science and Technology (HUST)</h3>
-            <p>B.Eng. in Mechanical Design, Manufacturing and Automation</p>
-            <p class="muted">GPA: 3.96 / 4.00 · Distinguished Graduate of HUST (2024)</p>
+
+          <div class="timeline-date">
+            Sep 2024 — Jun 2027
           </div>
+
+          <div class="timeline-content">
+
+            <h3>
+              Huazhong University of Science and Technology
+              <span class="institution-short">(HUST)</span>
+            </h3>
+
+            <p>
+              M.Eng. in Mechanical Engineering
+              <span class="muted">· Expected Jun 2027</span>
+            </p>
+
+            <p class="muted small">
+              Wuhan, China
+            </p>
+
+          </div>
+
         </article>
+
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            Sep 2020 — Jun 2024
+          </div>
+
+          <div class="timeline-content">
+
+            <h3>
+              Huazhong University of Science and Technology
+              <span class="institution-short">(HUST)</span>
+            </h3>
+
+            <p>
+              B.Eng. in Mechanical Design, Manufacturing and Automation
+            </p>
+
+            <p class="muted small">
+              Wuhan, China
+            </p>
+
+          </div>
+
+        </article>
+
       </div>
+
     </section>
 
-    <section class="section container">
-      <div class="two-column">
-        <div>
-          <p class="eyebrow">Selected Honors</p>
-          <h2>Honors</h2>
-          <ul class="simple-list">
-            <li><span>2024</span> Distinguished Graduate of HUST</li>
-            <li><span>2022</span> First Prize, Chinese Mathematics Competitions (CMC)</li>
-            <li><span>2022</span> Third Prize, China Collegiate Intelligent Robotics Creative Competition</li>
-          </ul>
+
+
+    <!-- ==================== Research Projects ==================== -->
+
+    <section
+      class="section container"
+      id="research"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Selected Work
+        </p>
+
+        <h2>
+          Research Projects
+        </h2>
+
+      </div>
+
+
+
+      <div class="project-list">
+
+
+        <!-- Project 01 -->
+
+        <article class="project-item">
+
+          <!-- Left: project number and date -->
+          <div class="project-side">
+
+            <span class="project-number">
+              01
+            </span>
+
+            <span class="project-date">
+              Jun 2025 — Present
+            </span>
+
+          </div>
+
+
+          <!-- Center: project information -->
+          <div class="project-content">
+
+            <div class="project-title-row">
+
+              <h3>
+                Reliability-Aware Microscopic 3D Reconstruction
+                System for Reflective Micro-Holes
+              </h3>
+
+              <span class="status">
+                Completed
+              </span>
+
+            </div>
+
+
+            <p class="project-summary">
+
+              Developed a microscopic shape-from-focus metrology
+              framework for reliable 3D reconstruction of reflective
+              industrial micro-hole surfaces.
+
+            </p>
+
+
+            <ul class="compact-list">
+
+              <li>
+                Integrated a microscopic SFF measurement system
+                with 10× optics, polarizers, and precision
+                translation stages.
+              </li>
+
+              <li>
+                Developed CycleGAN-based reflection-aware
+                preprocessing and a reliability-aware reconstruction
+                method incorporating focus confidence and
+                edge-preserving regularization.
+              </li>
+
+              <li>
+                Reduced mean diameter deviation by
+                <strong>43.7%</strong> and reconstruction MAE by
+                <strong>56.3%</strong> compared with baseline SFF.
+              </li>
+
+            </ul>
+
+
+            <!--
+            Enable this link after the project page is created.
+
+            <a
+              class="project-link"
+              href="projects/reliability-aware-sff/"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
+
+
+          <!-- Right: project preview -->
+          <figure class="project-media">
+
+            <img
+              src="projects/reliability-aware-sff/assets/images/sff-system.webp"
+              alt="Preview of the reliability-aware microscopic 3D reconstruction project"
+              loading="lazy"
+            />
+
+          </figure>
+
+        </article>
+
+        
+        <!-- Project 02 -->
+
+        <article class="project-item">
+
+          <div class="project-side">
+
+            <span class="project-number">
+              02
+            </span>
+
+            <span class="project-date">
+              Jun 2026 — Aug 2026
+            </span>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-title-row">
+
+              <h3>
+                Focus-Constrained Visual Predictive Control
+                for Robotic Micro-Hole Localization
+              </h3>
+
+              <span class="status">
+                Manuscript in Preparation
+              </span>
+
+            </div>
+
+
+            <p class="project-summary">
+
+              Developed a macro–micro visual control framework
+              for autonomous micro-hole localization under
+              limited field-of-view and focus constraints.
+
+            </p>
+
+
+            <ul class="compact-list">
+
+              <li>
+                Modeled a 6-DOF robot and 1D linear-stage system
+                with an orthogonal local task frame for decoupled
+                lateral search and axial focusing.
+              </li>
+
+              <li>
+                Integrated Tenengrad autofocus, bounded spiral
+                search, and nonlinear model predictive control
+                operating at 10 Hz.
+              </li>
+
+              <li>
+                Achieved an <strong>85%</strong> search success rate
+                for initial lateral offsets within 1.0 mm, with
+                final localization errors below
+                <strong>10 μm</strong>.
+              </li>
+
+            </ul>
+
+
+            <!--
+            Future project page:
+
+            <a
+              class="project-link"
+              href="projects/focus-constrained-vpc/"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Project 03 -->
+
+        <article class="project-item">
+
+          <div class="project-side">
+
+            <span class="project-number">
+              03
+            </span>
+
+            <span class="project-date">
+              Jan 2026 — Present
+            </span>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-title-row">
+
+              <h3>
+                Robotic Dynamic Obstacle Avoidance Control
+                based on Partial RGB-D Observations
+              </h3>
+
+              <span class="status">
+                Ongoing
+              </span>
+
+            </div>
+
+
+            <p class="project-summary">
+
+              Investigating closed-loop robotic obstacle avoidance
+              using partial RGB-D observations, learned obstacle
+              representations, trajectory prediction, and
+              model predictive control.
+
+            </p>
+
+
+            <ul class="compact-list">
+
+              <li>
+                Built a ROS 2 / Gazebo framework using RGB-D
+                reconstruction and local point-cloud processing
+                for online obstacle perception.
+              </li>
+
+              <li>
+                Estimated obstacle occupancy using PCA/MVEE
+                initialization and residual neural-network
+                refinement under occlusion and depth noise.
+              </li>
+
+              <li>
+                Combined Kalman-filter motion prediction with
+                MPC-based spatial constraints for dynamic
+                obstacle avoidance.
+              </li>
+
+            </ul>
+
+
+            <!--
+            Future project page:
+
+            <a
+              class="project-link"
+              href="projects/dynamic-obstacle-avoidance/"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Project 04 -->
+
+        <article class="project-item">
+
+          <div class="project-side">
+
+            <span class="project-number">
+              04
+            </span>
+
+            <span class="project-date">
+              Sep 2024 — May 2025
+            </span>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-title-row">
+
+              <h3>
+                Robotic Trajectory Planning for Aircraft CFRP
+                Horizontal Stabilizer Rib Machining
+              </h3>
+
+              <span class="status">
+                Completed
+              </span>
+
+            </div>
+
+
+            <p class="project-summary">
+
+              Developed stiffness-aware robotic machining analysis
+              and time-optimal trajectory planning for CFRP
+              horizontal stabilizer rib manufacturing.
+
+            </p>
+
+
+            <ul class="compact-list">
+
+              <li>
+                Derived ABB robot kinematics and a Jacobian-based
+                static stiffness model for machining-pose analysis.
+              </li>
+
+              <li>
+                Developed a fifth-order polynomial trajectory
+                planner optimized using particle swarm optimization,
+                reducing predicted machining time by
+                <strong>40.8%</strong> relative to GA.
+              </li>
+
+              <li>
+                Validated trajectories in RobotStudio and optimized
+                CFRP cutting parameters, reducing surface roughness
+                by <strong>13.6%</strong> to below
+                <strong>8.2 μm</strong>.
+              </li>
+
+            </ul>
+
+
+            <!--
+            Future project page:
+
+            <a
+              class="project-link"
+              href="projects/cfrp-machining-planning/"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================== Publications ==================== -->
+
+    <section
+      class="section container"
+      id="publications"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Research Outputs
+        </p>
+
+        <h2>
+          Publications & Manuscripts
+        </h2>
+
+      </div>
+
+
+      <div class="publication-list">
+
+
+        <article class="publication-item">
+
+          <div class="pub-year">
+            2026
+          </div>
+
+          <div>
+
+            <h3>
+              Reliability-aware shape-from-focus for
+              reflective 3-D micro-hole measurement
+            </h3>
+
+            <p class="authors">
+              <strong>S. Yan</strong>,
+              W. Xu,
+              L. Zeng,
+              and W. Li
+            </p>
+
+            <p class="pub-status">
+              Manuscript under major revision at
+              <em>
+                IEEE Transactions on Instrumentation and Measurement
+              </em>.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="publication-item">
+
+          <div class="pub-year">
+            2026
+          </div>
+
+          <div>
+
+            <h3>
+              Focus-Constrained Visual Predictive Control
+              for Robotic Micro-Hole Localization
+            </h3>
+
+            <p class="authors">
+              <strong>S. Yan</strong> et al.
+            </p>
+
+            <p class="pub-status">
+              Manuscript in preparation; planned for submission to
+              <em>
+                IEEE/ASME Transactions on Mechatronics
+              </em>.
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="publication-item">
+
+          <div class="pub-year">
+            2023
+          </div>
+
+          <div>
+
+            <h3>
+              Preliminary Design and Prototype Development
+              of an Air-ground Carrier Platform
+            </h3>
+
+            <p class="authors">
+              T. Chen,
+              J. Han,
+              J. Wang,
+              <strong>S. Yan</strong>,
+              C. Wan,
+              and F. Tian
+            </p>
+
+            <p class="pub-status">
+              2023 International Conference on Unmanned Aircraft Systems
+              (ICUAS), Warsaw, Poland, pp. 235–240.
+            </p>
+
+            <p class="pub-links">
+              <a
+                href="https://ieeexplore.ieee.org/abstract/document/10156435"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View paper on IEEE Xplore"
+              >
+                [Paper]
+              </a>
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================== Awards ==================== -->
+
+    <section
+      class="section container"
+      id="awards"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Selected Honors
+        </p>
+
+        <h2>
+          Honors & Awards
+        </h2>
+
+      </div>
+
+
+      <div class="award-list">
+
+        <div class="award-item">
+
+          <span class="award-year">
+            2024
+          </span>
+
+          <span>
+            Distinguished Graduate of HUST
+          </span>
+
         </div>
 
-        <div>
-          <p class="eyebrow">Technical Background</p>
-          <h2>Skills</h2>
-          <p><strong>Programming:</strong> C++, Python, MATLAB</p>
-          <p><strong>Tools:</strong> ROS / ROS 2, Gazebo, MoveIt, SolidWorks, Simulink</p>
+
+        <div class="award-item">
+
+          <span class="award-year">
+            2022
+          </span>
+
+          <span>
+            First Prize, Chinese Mathematics Competitions (CMC)
+          </span>
+
         </div>
+
+
+        <div class="award-item">
+
+          <span class="award-year">
+            2022
+          </span>
+
+          <span>
+            Third Prize, China Collegiate Intelligent Robotics
+            Creative Competition
+          </span>
+
+        </div>
+
+
+        <div class="award-item">
+
+          <span class="award-year">
+            2021
+          </span>
+
+          <span>
+            Academic Excellence Scholarship
+          </span>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="section container contact" id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Get in touch</h2>
-      <p>
-        For research discussions or PhD-related correspondence,
-        please feel free to contact me by email.
-      </p>
-      <a class="button" href="mailto:sitan@hust.edu.cn">sitan@hust.edu.cn</a>
-    </section>
+
   </main>
 
+
+
+  <!-- ==================== Footer ==================== -->
+
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Sitan Yan · Built with GitHub Pages</p>
+
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="current-year">2026</span> Sitan Yan
+      </p>
+
+      <p>
+        Academic Homepage · GitHub Pages
+      </p>
+
     </div>
+
   </footer>
+
+
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>
