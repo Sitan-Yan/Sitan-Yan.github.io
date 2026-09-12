@@ -1,0 +1,6 @@
+assets/
+**/assets/
+files/
+docs/
+.worktrees/
+.superpowers/

@@ -1,0 +1,25 @@
+.cfrp-figure {
+  margin: 16px 0 0;
+}
+.cfrp-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.cfrp-figure figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.cfrp-results {
+  margin: 14px 0;
+  padding-left: 20px;
+  font-size: 0.94rem;
+  color: var(--text-soft);
+}
+.cfrp-results li {
+  margin: 8px 0;
+}
