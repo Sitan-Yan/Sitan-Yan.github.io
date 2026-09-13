@@ -1,123 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A public overview of robotic microscopic positioning and focus-aware visual alignment for micro-hole measurement." />
-  <title>Focus-Constrained Visual Control | Sitan Yan</title>
-  <link rel="stylesheet" href="../../css/main.css" />
-  <link rel="stylesheet" href="../../css/project.css" />
-  <style>
-    .demo-figure { margin: 18px 0 0; }
-    .demo-figure video { width: 100%; max-height: 520px; display: block; background: #101420; border: 1px solid var(--line); border-radius: 4px; }
-    .demo-figure figcaption { margin-top: 7px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
-    .demo-title { margin: 18px 0 6px; font-size: 1rem; }
-    .method-figure { margin: 16px 0 0; }
-    .method-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: white; }
-    .method-figure figcaption { margin-top: 7px; color: var(--muted); font-size: .8rem; line-height: 1.5; }
-    .method-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: 24px; align-items: start; }
-    .method-layout .method-figure { margin-top: 0; }
-    .method-layout p { font-size: .94rem; line-height: 1.6; }
-    .method-layout h3 { margin: 0 0 6px; font-size: 1rem; }
-    @media (max-width: 700px) { .method-layout { grid-template-columns: 1fr; gap: 16px; } }
-    .vpc-hero-image { aspect-ratio: 16 / 10; }
-  </style>
-</head>
-<body>
-  <header class="site-header"><div class="container nav-wrap">
-    <a class="brand" href="../../">Sitan Yan</a>
-    <nav class="nav-links" aria-label="Project navigation"><a href="../../">Home</a><a href="../../#research">Research</a><a class="nav-cv" href="../../files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></nav>
-  </div></header>
-  <main>
-    <section class="project-hero container">
-      <a class="back-link" href="../../#research">← Back to Research</a>
-      <div class="project-hero-grid">
-        <div class="project-hero-copy">
-          <div class="project-meta"><span>Jun 2026 — Aug 2026</span><span class="project-status">Manuscript in Preparation</span></div>
-          <h1 class="project-page-title">Focus-Constrained Visual Predictive Control for Robotic Micro-Hole Localization</h1>
-          <p class="project-lead">This project studies visual alignment for robotic microscopic measurement of micro-holes on curved surfaces, where a small field of view and shallow depth of field make nominal robot positioning insufficient.</p>
-          <p class="project-intro">I developed a robot-assisted measurement framework that combines coarse positioning with local visual feedback to bring a target into view and maintain usable focus for subsequent measurement.</p>
-          <div class="project-info">
-            <div><span class="info-label">Institution</span><span>Huazhong University of Science and Technology</span></div>
-            <div><span class="info-label">Focus</span><span>Robotic perception · Microscopic alignment · Visual control</span></div>
-            <div><span class="info-label">Status</span><span>Ongoing research documentation and evaluation</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A public overview of robotic microscopic positioning and focus-aware visual alignment for micro-hole measurement."
+    />
+    <title>Focus-Constrained Visual Control | Sitan Yan</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/focus-constrained.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../../">Sitan Yan</a>
+        <nav class="nav-links" aria-label="Project navigation">
+          <a href="../../">Home</a><a href="../../#research">Research</a
+          ><a
+            class="nav-cv"
+            href="../../files/Sitan_Yan_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CV</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="project-hero container">
+        <a class="back-link" href="../../#research">← Back to Research</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy">
+            <div class="project-meta">
+              <span>Jun 2026 — Aug 2026</span
+              ><span class="project-status">Manuscript in Preparation</span>
+            </div>
+            <h1 class="project-page-title">
+              Focus-Constrained Visual Predictive Control for Robotic Micro-Hole Localization
+            </h1>
+            <p class="project-lead">
+              This project studies visual alignment for robotic microscopic measurement of
+              micro-holes on curved surfaces, where a small field of view and shallow depth of field
+              make nominal robot positioning insufficient.
+            </p>
+            <p class="project-intro">
+              I developed a robot-assisted measurement framework that combines coarse positioning
+              with local visual feedback to bring a target into view and maintain usable focus for
+              subsequent measurement.
+            </p>
+            <div class="project-info">
+              <div>
+                <span class="info-label">Institution</span
+                ><span>Huazhong University of Science and Technology</span>
+              </div>
+              <div>
+                <span class="info-label">Focus</span
+                ><span>Robotic perception · Microscopic alignment · Visual control</span>
+              </div>
+              <div>
+                <span class="info-label">Status</span
+                ><span>Ongoing research documentation and evaluation</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <figure class="project-hero-media vpc-hero-image"><img src="assets/images/microscopic-measurement.jpg" alt="Robotic microscope and an inset microscopic view during micro-hole measurement" /></figure>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">01</span><h2>Overview</h2></div>
-      <div class="project-section-content">
-        <p>Geometric priors can guide a robot toward a nominal hole location. Manufacturing variation and accumulated positioning errors can nevertheless leave the actual opening off-center, outside the microscopic view, or out of focus.</p>
-        <p>The research connects robot positioning with image-based local alignment. Its objective is to establish a clear, centered microscopic view that supports downstream image acquisition and micro-hole measurement.</p>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">02</span><h2>Coordinated Motion</h2></div>
-      <div class="project-section-content">
-        <p>The microscope is mounted on a linear stage attached to the robot flange. The motion chain connects the robot base <strong>{B}</strong>, flange <strong>{E}</strong>, stage <strong>{M}</strong>, and camera <strong>{C}</strong>: robot motion positions the assembly, the flange-to-stage attachment is rigid, and the stage translates the camera along its travel direction.</p>
-        <figure class="method-figure">
-          <a href="assets/images/motion-chain.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the coordinated motion diagram at full size"><img src="assets/images/motion-chain.webp" alt="Motion chain from robot base B to flange E, rigidly attached linear stage M, and camera C; the stage translates the camera along its travel axis" loading="lazy" /></a>
-          <figcaption>Robot–stage–camera motion relationship. The blue arrow indicates the flange-to-camera offset; the orange line marks the optical axis. Select the diagram to enlarge.</figcaption>
-        </figure>
-        <p style="margin-top: 12px">Because the camera is offset from the flange, a change in robot orientation can also shift the camera position. Camera motion therefore depends on both the robot and the stage. With the stage approximately aligned to the optical axis, its fine travel supports focus adjustment while the robot provides local target positioning.</p>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">03</span><h2>Method Overview</h2></div>
-      <div class="project-section-content">
-        <div class="method-layout">
-          <div>
-            <h3>Lateral alignment and axial focus</h3>
-            <p>A local search frame is defined near the nominal measurement pose. Two directions perpendicular to the optical axis describe lateral search and centering; the axial direction describes focus adjustment. These directions follow the microscope orientation rather than the global robot axes.</p>
-            <p>The robot primarily corrects lateral target position, while the linear stage provides fine focus adjustment. On a curved surface, lateral motion can change the required working distance, so focus must be monitored and compensated during alignment.</p>
-            <h3>Image feedback closes the loop</h3>
-            <p>Image sharpness indicates whether the view is usable; once the opening is visible, its displacement from the image center guides alignment. Predictive control coordinates small adjustments while considering focus, actuator limits, and clearance from the workpiece.</p>
-          </div>
-          <figure class="method-figure">
-            <a href="assets/images/local-search-frame.webp" target="_blank" rel="noopener noreferrer" aria-label="Open the local search frame diagram at full size"><img src="assets/images/local-search-frame.webp" alt="Two blue lateral directions span the local search plane; an orange axial direction represents focusing near the micro-hole" loading="lazy" /></a>
-            <figcaption>Local search geometry: lateral motion brings the hole into view and toward the image center; axial motion adjusts focus. The dotted boundary denotes a bounded search region.</figcaption>
+          <figure class="project-hero-media vpc-hero-image">
+            <img
+              src="assets/images/microscopic-measurement.jpg"
+              alt="Robotic microscope and an inset microscopic view during micro-hole measurement"
+            />
           </figure>
         </div>
-        <div class="approach-grid">
-          <div class="approach-item"><span class="approach-number">1</span><h3>Recover focus</h3><p>Establish a usable microscopic image near the nominal target position.</p></div>
-          <div class="approach-item"><span class="approach-number">2</span><h3>Find the opening</h3><p>Search locally for the micro-hole while monitoring and maintaining focus.</p></div>
-          <div class="approach-item"><span class="approach-number">3</span><h3>Center the target</h3><p>Use the observed hole-center offset to refine alignment for subsequent measurement.</p></div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">01</span>
+          <h2>Overview</h2>
         </div>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">04</span><h2>System Demonstrations</h2></div>
-      <div class="project-section-content">
-        <p>These edited recordings illustrate the experimental platform and measurement workflow. Both clips play at 2× the source-video speed; they are qualitative demonstrations rather than timing or accuracy benchmarks.</p>
-        <h3 class="demo-title">Robot positioning</h3>
-        <figure class="demo-figure">
-          <video controls muted playsinline preload="none" poster="assets/images/robot-positioning.jpg" aria-label="Robot positioning demonstration, edited at twice the source-video speed"><source src="assets/videos/robot-positioning.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
-          <figcaption>Robot motion around the measurement target. Edited excerpt · 2× source speed · silent.</figcaption>
-        </figure>
-        <h3 class="demo-title">Microscopic measurement</h3>
-        <figure class="demo-figure">
-          <video controls muted playsinline preload="none" poster="assets/images/microscopic-measurement.jpg" aria-label="Microscopic measurement demonstration, edited at twice the source-video speed"><source src="assets/videos/microscopic-measurement.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
-          <figcaption>Optical assembly and microscopic image during measurement. Edited excerpt · 2× source speed · silent.</figcaption>
-        </figure>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">05</span><h2>My Contribution</h2></div>
-      <div class="project-section-content"><ul class="contribution-list">
-        <li>Developed the framework connecting robot positioning, microscopic observation, and local target alignment.</li>
-        <li>Modeled coordinated robot and linear-stage motion for microscopic measurement tasks.</li>
-        <li>Investigated focus-aware visual control under limited field of view and actuator constraints.</li>
-        <li>Integrated the experimental workflow and documented the system demonstrations.</li>
-      </ul></div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">06</span><h2>Research Status</h2></div>
-      <div class="project-section-content"><div class="research-status-box"><p>A manuscript is in preparation. This page presents a public system overview and selected demonstrations; detailed algorithms, mathematical formulations, implementation parameters, and quantitative comparisons are reserved for publication.</p></div></div>
-    </section>
-    <section class="project-footer-nav container"><a href="../../#research">← Back to Research Projects</a></section>
-  </main>
-  <footer class="footer"><div class="container"><p>© 2026 Sitan Yan</p></div></footer>
-</body>
+        <div class="project-section-content">
+          <p>
+            Geometric priors can guide a robot toward a nominal hole location. Manufacturing
+            variation and accumulated positioning errors can nevertheless leave the actual opening
+            off-center, outside the microscopic view, or out of focus.
+          </p>
+          <p>
+            The research connects robot positioning with image-based local alignment. Its objective
+            is to establish a clear, centered microscopic view that supports downstream image
+            acquisition and micro-hole measurement.
+          </p>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">02</span>
+          <h2>Coordinated Motion</h2>
+        </div>
+        <div class="project-section-content">
+          <p>
+            The microscope is mounted on a linear stage attached to the robot flange. The motion
+            chain connects the robot base <strong>{B}</strong>, flange <strong>{E}</strong>, stage
+            <strong>{M}</strong>, and camera <strong>{C}</strong>: robot motion positions the
+            assembly, the flange-to-stage attachment is rigid, and the stage translates the camera
+            along its travel direction.
+          </p>
+          <figure class="method-figure">
+            <a
+              href="assets/images/motion-chain.webp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the coordinated motion diagram at full size"
+              ><img
+                src="assets/images/motion-chain.webp"
+                alt="Motion chain from robot base B to flange E, rigidly attached linear stage M, and camera C; the stage translates the camera along its travel axis"
+                loading="lazy"
+            /></a>
+            <figcaption>
+              Robot–stage–camera motion relationship. The blue arrow indicates the flange-to-camera
+              offset; the orange line marks the optical axis. Select the diagram to enlarge.
+            </figcaption>
+          </figure>
+          <p class="method-note">
+            Because the camera is offset from the flange, a change in robot orientation can also
+            shift the camera position. Camera motion therefore depends on both the robot and the
+            stage. With the stage approximately aligned to the optical axis, its fine travel
+            supports focus adjustment while the robot provides local target positioning.
+          </p>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">03</span>
+          <h2>Method Overview</h2>
+        </div>
+        <div class="project-section-content">
+          <div class="method-layout">
+            <div>
+              <h3>Lateral alignment and axial focus</h3>
+              <p>
+                A local search frame is defined near the nominal measurement pose. Two directions
+                perpendicular to the optical axis describe lateral search and centering; the axial
+                direction describes focus adjustment. These directions follow the microscope
+                orientation rather than the global robot axes.
+              </p>
+              <p>
+                The robot primarily corrects lateral target position, while the linear stage
+                provides fine focus adjustment. On a curved surface, lateral motion can change the
+                required working distance, so focus must be monitored and compensated during
+                alignment.
+              </p>
+              <h3>Image feedback closes the loop</h3>
+              <p>
+                Image sharpness indicates whether the view is usable; once the opening is visible,
+                its displacement from the image center guides alignment. Predictive control
+                coordinates small adjustments while considering focus, actuator limits, and
+                clearance from the workpiece.
+              </p>
+            </div>
+            <figure class="method-figure">
+              <a
+                href="assets/images/local-search-frame.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the local search frame diagram at full size"
+                ><img
+                  src="assets/images/local-search-frame.webp"
+                  alt="Two blue lateral directions span the local search plane; an orange axial direction represents focusing near the micro-hole"
+                  loading="lazy"
+              /></a>
+              <figcaption>
+                Local search geometry: lateral motion brings the hole into view and toward the image
+                center; axial motion adjusts focus. The dotted boundary denotes a bounded search
+                region.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="approach-grid">
+            <div class="approach-item">
+              <span class="approach-number">1</span>
+              <h3>Recover focus</h3>
+              <p>Establish a usable microscopic image near the nominal target position.</p>
+            </div>
+            <div class="approach-item">
+              <span class="approach-number">2</span>
+              <h3>Find the opening</h3>
+              <p>Search locally for the micro-hole while monitoring and maintaining focus.</p>
+            </div>
+            <div class="approach-item">
+              <span class="approach-number">3</span>
+              <h3>Center the target</h3>
+              <p>
+                Use the observed hole-center offset to refine alignment for subsequent measurement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">04</span>
+          <h2>System Demonstrations</h2>
+        </div>
+        <div class="project-section-content">
+          <p>
+            These edited recordings illustrate the experimental platform and measurement workflow.
+            Both clips play at 2× the source-video speed; they are qualitative demonstrations rather
+            than timing or accuracy benchmarks.
+          </p>
+          <h3 class="demo-title">Robot positioning</h3>
+          <figure class="demo-figure">
+            <video
+              controls
+              muted
+              playsinline
+              preload="none"
+              poster="assets/images/robot-positioning.jpg"
+              aria-label="Robot positioning demonstration, edited at twice the source-video speed"
+            >
+              <source src="assets/videos/robot-positioning.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+            <figcaption>
+              Robot motion around the measurement target. Edited excerpt · 2× source speed · silent.
+            </figcaption>
+          </figure>
+          <h3 class="demo-title">Microscopic measurement</h3>
+          <figure class="demo-figure">
+            <video
+              controls
+              muted
+              playsinline
+              preload="none"
+              poster="assets/images/microscopic-measurement.jpg"
+              aria-label="Microscopic measurement demonstration, edited at twice the source-video speed"
+            >
+              <source src="assets/videos/microscopic-measurement.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+            <figcaption>
+              Optical assembly and microscopic image during measurement. Edited excerpt · 2× source
+              speed · silent.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">05</span>
+          <h2>My Contribution</h2>
+        </div>
+        <div class="project-section-content">
+          <ul class="contribution-list">
+            <li>
+              Developed the framework connecting robot positioning, microscopic observation, and
+              local target alignment.
+            </li>
+            <li>
+              Modeled coordinated robot and linear-stage motion for microscopic measurement tasks.
+            </li>
+            <li>
+              Investigated focus-aware visual control under limited field of view and actuator
+              constraints.
+            </li>
+            <li>Integrated the experimental workflow and documented the system demonstrations.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">06</span>
+          <h2>Research Status</h2>
+        </div>
+        <div class="project-section-content">
+          <div class="research-status-box">
+            <p>
+              A manuscript is in preparation. This page presents a public system overview and
+              selected demonstrations; detailed algorithms, mathematical formulations,
+              implementation parameters, and quantitative comparisons are reserved for publication.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="project-footer-nav container">
+        <a href="../../#research">← Back to Research Projects</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container"><p>© 2026 Sitan Yan</p></div>
+    </footer>
+  </body>
 </html>

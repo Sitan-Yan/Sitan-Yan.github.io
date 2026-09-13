@@ -1,0 +1,67 @@
+.demo-figure {
+  margin: 18px 0 0;
+}
+.demo-figure video {
+  width: 100%;
+  max-height: 520px;
+  display: block;
+  background: #101420;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.demo-figure figcaption {
+  margin-top: 7px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.demo-title {
+  margin: 18px 0 6px;
+  font-size: 1rem;
+}
+.method-figure {
+  margin: 16px 0 0;
+}
+.method-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: white;
+}
+.method-figure figcaption {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.method-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 24px;
+  align-items: start;
+}
+.method-layout .method-figure {
+  margin-top: 0;
+}
+.method-layout p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+.method-layout h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+@media (max-width: 700px) {
+  .method-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.vpc-hero-image {
+  aspect-ratio: 16 / 10;
+}
+.method-note {
+  margin-top: 12px;
+}

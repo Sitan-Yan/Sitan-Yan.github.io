@@ -1,99 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stiffness-aware posture optimization, smooth trajectory planning, and experimental validation for robotic CFRP rib machining." />
-  <title>Robotic CFRP Machining | Sitan Yan</title>
-  <link rel="stylesheet" href="../../css/main.css" />
-  <link rel="stylesheet" href="../../css/project.css" />
-  <style>
-    .cfrp-figure { margin: 16px 0 0; }
-    .cfrp-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
-    .cfrp-figure figcaption { margin-top: 6px; color: var(--muted); font-size: .78rem; line-height: 1.5; }
-    .cfrp-results { margin: 14px 0; padding-left: 20px; font-size: .94rem; color: var(--text-soft); }
-    .cfrp-results li { margin: 8px 0; }
-  </style>
-</head>
-<body>
-  <header class="site-header"><div class="container nav-wrap">
-    <a class="brand" href="../../">Sitan Yan</a>
-    <nav class="nav-links" aria-label="Project navigation">
-      <a href="../../">Home</a><a href="../../#research">Research</a>
-      <a class="nav-cv" href="../../files/Sitan_Yan_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-    </nav>
-  </div></header>
-  <main>
-    <section class="project-hero container">
-      <a class="back-link" href="../../#research">← Back to Research</a>
-      <div class="project-hero-grid">
-        <div class="project-hero-copy">
-          <div class="project-meta"><span>Robotic Manufacturing</span><span class="project-status">Completed</span></div>
-          <h1 class="project-page-title">Robotic Trajectory Planning for Aircraft CFRP Horizontal Stabilizer Rib Machining</h1>
-          <p class="project-lead">This project combines smooth trajectory planning, stiffness-aware robot posture selection, and cutting-parameter optimization for machining carbon-fiber-reinforced polymer (CFRP) rib features.</p>
-          <p class="project-intro">I developed robot models and optimization methods, then evaluated machining quality through CFRP milling experiments, surface-roughness measurements, and scanned contour analysis.</p>
-          <div class="project-info">
-            <div><span class="info-label">Institution</span><span>Huazhong University of Science and Technology</span></div>
-            <div><span class="info-label">Advisors</span><span><a href="https://mse.hust.edu.cn/info/1142/1340.htm" target="_blank" rel="noopener noreferrer">Prof. Wenlong Li</a> · <a href="https://mse.hust.edu.cn/info/1068/14129.htm" target="_blank" rel="noopener noreferrer">Dr. Wei Xu</a></span></div>
-            <div><span class="info-label">Platform</span><span>ABB IRB 6660-205/1.9 · CFRP milling</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stiffness-aware posture optimization, smooth trajectory planning, and experimental validation for robotic CFRP rib machining."
+    />
+    <title>Robotic CFRP Machining | Sitan Yan</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/project.css" />
+    <link rel="stylesheet" href="../../css/cfrp.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../../">Sitan Yan</a>
+        <nav class="nav-links" aria-label="Project navigation">
+          <a href="../../">Home</a><a href="../../#research">Research</a>
+          <a
+            class="nav-cv"
+            href="../../files/Sitan_Yan_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CV</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="project-hero container">
+        <a class="back-link" href="../../#research">← Back to Research</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy">
+            <div class="project-meta">
+              <span>Robotic Manufacturing</span><span class="project-status">Completed</span>
+            </div>
+            <h1 class="project-page-title">
+              Robotic Trajectory Planning for Aircraft CFRP Horizontal Stabilizer Rib Machining
+            </h1>
+            <p class="project-lead">
+              This project combines smooth trajectory planning, stiffness-aware robot posture
+              selection, and cutting-parameter optimization for machining carbon-fiber-reinforced
+              polymer (CFRP) rib features.
+            </p>
+            <p class="project-intro">
+              I developed robot models and optimization methods, then evaluated machining quality
+              through CFRP milling experiments, surface-roughness measurements, and scanned contour
+              analysis.
+            </p>
+            <div class="project-info">
+              <div>
+                <span class="info-label">Institution</span
+                ><span>Huazhong University of Science and Technology</span>
+              </div>
+              <div>
+                <span class="info-label">Advisors</span
+                ><span
+                  ><a
+                    href="https://mse.hust.edu.cn/info/1142/1340.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Prof. Wenlong Li</a
+                  >
+                  ·
+                  <a
+                    href="https://mse.hust.edu.cn/info/1068/14129.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Dr. Wei Xu</a
+                  ></span
+                >
+              </div>
+              <div>
+                <span class="info-label">Platform</span
+                ><span>ABB IRB 6660-205/1.9 · CFRP milling</span>
+              </div>
+            </div>
           </div>
+          <figure class="project-hero-media">
+            <img
+              src="assets/images/machining-platform.png"
+              alt="ABB robot and CFRP workpiece in the machining experiment"
+            />
+          </figure>
         </div>
-        <!-- Thesis Fig. 6-6, printed p. 62 / PDF p. 70. See IMAGE_GUIDE.md. -->
-        <figure class="project-hero-media"><img src="assets/images/machining-platform.png" alt="ABB robot and CFRP workpiece in the machining experiment" /></figure>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">01</span><h2>Overview</h2></div>
-      <div class="project-section-content">
-        <p>Robots offer a flexible workspace for machining large composite components, but pose-dependent stiffness and changes in cutting engagement can degrade edge quality. The objective was to improve motion efficiency and machining quality for features representative of aircraft horizontal stabilizer ribs.</p>
-        <p>The work connects kinematic and stiffness modeling with trajectory optimization, tool-axis posture selection, and physical machining trials. Experiments used CFRP plates and machined slots; they were not a full-aircraft-component production qualification.</p>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">02</span><h2>Core Approach</h2></div>
-      <div class="project-section-content">
-        <p>The planning framework addresses both how the robot moves and which posture it uses to resist machining loads.</p>
-        <div class="approach-grid">
-          <div class="approach-item"><span class="approach-number">1</span><h3>Kinematics &amp; stiffness</h3><p>Built a modified-DH model and derived the Jacobian. Related joint stiffness to Cartesian stiffness, then used stiffness and force ellipsoids to evaluate pose-dependent performance.</p></div>
-          <div class="approach-item"><span class="approach-number">2</span><h3>Smooth trajectory planning</h3><p>Used piecewise fifth-order polynomial interpolation and an improved particle swarm optimizer to minimize trajectory duration under joint-motion and dexterity constraints.</p></div>
-          <div class="approach-item"><span class="approach-number">3</span><h3>Posture selection</h3><p>Evaluated machining postures using stiffness and dexterity criteria, exploiting rotation about the tool axis while respecting robot joint limits.</p></div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">01</span>
+          <h2>Overview</h2>
         </div>
-        <!-- Thesis Fig. 6-7(a,b), printed p. 63 / PDF p. 71. -->
-        <figure class="cfrp-figure"><img src="assets/images/posture-comparison.png" alt="Robot machining posture before optimization on the left and after optimization on the right" loading="lazy" /><figcaption>Machining postures before (left) and after (right) optimization.</figcaption></figure>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">03</span><h2>Experimental Validation</h2></div>
-      <div class="project-section-content">
-        <p>A dust-extraction attachment was designed and integrated with the robotic machining platform. An L16 orthogonal experiment examined feed rate, milling depth, and spindle speed; surface roughness was measured using a TR200 instrument.</p>
-        <p>A follow-up trial at the selected settings—60 mm/min feed, 2 mm milling depth, and 6,000 rpm spindle speed—produced a measured Ra of 3.689 μm. Larger-plate tests used 500 × 300 × 3 mm CFRP specimens with 40 × 20 mm slots to compare robot postures and continuous versus separate-edge machining paths.</p>
-        <p>Scanned point clouds were also used to assess machined contours and corner transitions. The platform photograph above shows the large-plate experiment with the dust-extraction attachment removed for visibility.</p>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">04</span><h2>Selected Results</h2></div>
-      <div class="project-section-content">
-        <ul class="cfrp-results">
-          <li><strong>23 s → approximately 12.36 s planned trajectory duration.</strong> The optimized segment times improved on the initial time allocation in the trajectory-planning example.</li>
-          <li><strong>13.6% lower average edge-wise maximum Ra after posture optimization.</strong> Each edge was measured three times, with its maximum used for comparison.</li>
-          <li><strong>8.0% lower maximum Ra on edge II using separate-edge paths.</strong> This comparison kept the optimized posture and cutting settings unchanged.</li>
-          <li><strong>0.442 mm average contour error</strong> across the large-plate measurements, providing a geometric assessment alongside roughness.</li>
-        </ul>
-        <!-- Redrawn from thesis Tables 4-5 and 6-7; values and caveats in IMAGE_GUIDE.md. -->
-        <figure class="cfrp-figure"><img src="assets/images/validation-results.svg" alt="Planned duration decreases from 23 to 12.36 seconds; measured maximum roughness decreases on all three edges after posture optimization" loading="lazy" /><figcaption>Left: planned trajectory duration (Table 4-5). Right: maximum measured roughness for each edge before and after posture optimization (Table 6-7). Planning and machining results come from separate evaluations.</figcaption></figure>
-      </div>
-    </section>
-    <section class="project-section container">
-      <div class="project-section-title"><span class="section-number">05</span><h2>My Contribution</h2></div>
-      <div class="project-section-content"><ul class="contribution-list">
-        <li>Designed and integrated the dust-extraction attachment for the existing robotic machining platform.</li>
-        <li>Developed kinematic and stiffness models, smooth trajectory optimization, and stiffness-aware posture selection.</li>
-        <li>Conducted machining-parameter experiments and comparative milling trials on CFRP specimens.</li>
-        <li>Analyzed surface roughness, scanned contour errors, and machined corner transitions.</li>
-      </ul></div>
-    </section>
-    <section class="project-footer-nav container"><a href="../../#research">← Back to Research Projects</a></section>
-  </main>
-  <footer class="footer"><div class="container"><p>© 2026 Sitan Yan</p></div></footer>
-</body>
+        <div class="project-section-content">
+          <p>
+            Robots offer a flexible workspace for machining large composite components, but
+            pose-dependent stiffness and changes in cutting engagement can degrade edge quality. The
+            objective was to improve motion efficiency and machining quality for features
+            representative of aircraft horizontal stabilizer ribs.
+          </p>
+          <p>
+            The work connects kinematic and stiffness modeling with trajectory optimization,
+            tool-axis posture selection, and physical machining trials. Experiments used CFRP plates
+            and machined slots; they were not a full-aircraft-component production qualification.
+          </p>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">02</span>
+          <h2>Core Approach</h2>
+        </div>
+        <div class="project-section-content">
+          <p>
+            The planning framework addresses both how the robot moves and which posture it uses to
+            resist machining loads.
+          </p>
+          <div class="approach-grid">
+            <div class="approach-item">
+              <span class="approach-number">1</span>
+              <h3>Kinematics &amp; stiffness</h3>
+              <p>
+                Built a modified-DH model and derived the Jacobian. Related joint stiffness to
+                Cartesian stiffness, then used stiffness and force ellipsoids to evaluate
+                pose-dependent performance.
+              </p>
+            </div>
+            <div class="approach-item">
+              <span class="approach-number">2</span>
+              <h3>Smooth trajectory planning</h3>
+              <p>
+                Used piecewise fifth-order polynomial interpolation and an improved particle swarm
+                optimizer to minimize trajectory duration under joint-motion and dexterity
+                constraints.
+              </p>
+            </div>
+            <div class="approach-item">
+              <span class="approach-number">3</span>
+              <h3>Posture selection</h3>
+              <p>
+                Evaluated machining postures using stiffness and dexterity criteria, exploiting
+                rotation about the tool axis while respecting robot joint limits.
+              </p>
+            </div>
+          </div>
+          <figure class="cfrp-figure">
+            <img
+              src="assets/images/posture-comparison.png"
+              alt="Robot machining posture before optimization on the left and after optimization on the right"
+              loading="lazy"
+            />
+            <figcaption>
+              Machining postures before (left) and after (right) optimization.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">03</span>
+          <h2>Experimental Validation</h2>
+        </div>
+        <div class="project-section-content">
+          <p>
+            A dust-extraction attachment was designed and integrated with the robotic machining
+            platform. An L16 orthogonal experiment examined feed rate, milling depth, and spindle
+            speed; surface roughness was measured using a TR200 instrument.
+          </p>
+          <p>
+            A follow-up trial at the selected settings—60 mm/min feed, 2 mm milling depth, and 6,000
+            rpm spindle speed—produced a measured Ra of 3.689 μm. Larger-plate tests used 500 × 300
+            × 3 mm CFRP specimens with 40 × 20 mm slots to compare robot postures and continuous
+            versus separate-edge machining paths.
+          </p>
+          <p>
+            Scanned point clouds were also used to assess machined contours and corner transitions.
+            The platform photograph above shows the large-plate experiment with the dust-extraction
+            attachment removed for visibility.
+          </p>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">04</span>
+          <h2>Selected Results</h2>
+        </div>
+        <div class="project-section-content">
+          <ul class="cfrp-results">
+            <li>
+              <strong>23 s → approximately 12.36 s planned trajectory duration.</strong> The
+              optimized segment times improved on the initial time allocation in the
+              trajectory-planning example.
+            </li>
+            <li>
+              <strong>13.6% lower average edge-wise maximum Ra after posture optimization.</strong>
+              Each edge was measured three times, with its maximum used for comparison.
+            </li>
+            <li>
+              <strong>8.0% lower maximum Ra on edge II using separate-edge paths.</strong> This
+              comparison kept the optimized posture and cutting settings unchanged.
+            </li>
+            <li>
+              <strong>0.442 mm average contour error</strong> across the large-plate measurements,
+              providing a geometric assessment alongside roughness.
+            </li>
+          </ul>
+          <figure class="cfrp-figure">
+            <img
+              src="assets/images/validation-results.svg"
+              alt="Planned duration decreases from 23 to 12.36 seconds; measured maximum roughness decreases on all three edges after posture optimization"
+              loading="lazy"
+            />
+            <figcaption>
+              Left: planned trajectory duration (Table 4-5). Right: maximum measured roughness for
+              each edge before and after posture optimization (Table 6-7). Planning and machining
+              results come from separate evaluations.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-section container">
+        <div class="project-section-title">
+          <span class="section-number">05</span>
+          <h2>My Contribution</h2>
+        </div>
+        <div class="project-section-content">
+          <ul class="contribution-list">
+            <li>
+              Designed and integrated the dust-extraction attachment for the existing robotic
+              machining platform.
+            </li>
+            <li>
+              Developed kinematic and stiffness models, smooth trajectory optimization, and
+              stiffness-aware posture selection.
+            </li>
+            <li>
+              Conducted machining-parameter experiments and comparative milling trials on CFRP
+              specimens.
+            </li>
+            <li>
+              Analyzed surface roughness, scanned contour errors, and machined corner transitions.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="project-footer-nav container">
+        <a href="../../#research">← Back to Research Projects</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container"><p>© 2026 Sitan Yan</p></div>
+    </footer>
+  </body>
 </html>
